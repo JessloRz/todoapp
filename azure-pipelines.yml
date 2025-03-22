@@ -11,14 +11,14 @@ resources:
       type: git
       name: templates-project/templetes  # Proyecto/Repositorio
       ref: refs/heads/main
-    - repository: 'articulo'
+    - repository: 'todoapp'
       type: git
-      name: DevOpsEjemplo/articulo     # Proyecto/Repositorio
+      name: DevOpsEjemplo/todoapp     # Proyecto/Repositorio
       ref: refs/heads/main
 
 extends:
   template: springboot-ci-template.yml@templetes
   parameters:
-    repoName: 'articulo'
+    repoName: 'todoapp'
     mavenGoals: 'clean package'
-    environment: 'dev'
+    environment: 'qa'
